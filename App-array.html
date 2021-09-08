@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript</title>
+</head>
+<body>
+
+	<input type="text" id="recuperarValor">
+	<button onclick="adicionarObjeto()">Adicionar</button>
+	<button onclick="ordenarObjeto()">Ordernar</button>
+	<script type="text/javascript">
+
+	  var objetos = ['Cadeiras', 'Impressora', 'Garfo']
+
+	  function adicionarObjeto() {
+	  	var campo = document.getElementById('recuperarValor').value 
+	  	if(campo == '') {
+	  		alert('Informar valor válido')
+	  	} if(objetos.indexOf(campo) !== -1){
+	  		alert('Objeto já foi adicionado')
+	  	} else {
+	  		objetos.push(campo)
+	  		console.log(objetos)
+	  		document.getElementById('recuperarValor').value = ''
+	  	}
+	  }
+
+	  function ordenarObjeto() {
+	  	objetos.sort()
+	  	console.log(objetos)
+	  }
+		
+
+	</script>
+</body>
+</html>
